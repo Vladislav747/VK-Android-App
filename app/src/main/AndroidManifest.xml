@@ -14,16 +14,15 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-     W       </intent-filter>
+         </intent-filter>
         </activity>
-<!--
         <activity
 
             android:name="com.vk.sdk.VKServiceActivity"
 
             android:label="ServiceActivity"
 
-            android:theme="@style/VK.Transparent" />-->
+            android:theme="@style/VK.Transparent" />
     </application>
 
 </manifest>

@@ -3,7 +3,7 @@ package com.example.vladislavkudryakov.vk_3;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-/*
+
 import android.util.Log;
 import android.widget.Toast;
 
@@ -17,7 +17,8 @@ import com.vk.sdk.VKCallback;
 import com.vk.sdk.VKSdk;
 import com.vk.sdk.api.VKError;
 import com.vk.sdk.util.VKUtil;
-*/
+import
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        String[] fingerprints = VKUtil.getCertificateFingerprint(this, this.getPackageName());
+        Log.d("MainActivity", "Fingerprint: " + Arrays.toString(fingerprints));
 /*
         @Override
         protected void attachBaseContext(Context base) {
