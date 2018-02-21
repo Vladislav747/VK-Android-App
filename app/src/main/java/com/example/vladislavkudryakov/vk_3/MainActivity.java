@@ -3,6 +3,7 @@ package com.example.vladislavkudryakov.vk_3;
 import android.content.Intent;
 import android.os.Bundle;
 
+import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
 /*import com.arellomobile.mvp.MvpAppCompatActivity;
@@ -30,7 +31,7 @@ public class MainActivity extends MvpAppCompatActivity implements MainView {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_base);
 //Hide the code - need only for one use code vor VK app
 /*
         String[] fingerprints = VKUtil.getCertificateFingerprint(this, this.getPackageName());
@@ -44,6 +45,10 @@ public class MainActivity extends MvpAppCompatActivity implements MainView {
             super.attachBaseContext(base);
             MultiDex.install(this);
         }*/
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        setSupportActionBar(toolbar);
 // Пользователь успешно авторизовался
 mPresenter.checkAuth();
     }
